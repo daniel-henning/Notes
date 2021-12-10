@@ -16,6 +16,17 @@ c.NotebookApp.port = 8888  # 设置端口8888，也可用其他的，比如1080�
 jupyter notebook
 
 
+6. 主题
+pip install jupyterthemes
+
+# list available themes
+# onedork | grade3 | oceans16 | chesterish | monokai | solarizedl | solarizedd
+jt -l
+
+# select theme...
+jt -t chesterish
+
+
 
 端口转发（mobaxterm 的ssh tunneling 可快速实现）
 #windows端实现服务器端口转发。
