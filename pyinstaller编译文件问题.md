@@ -17,5 +17,5 @@ for d in a.datas:
 
 修改完文件后使用.spec重新编译程序即可解决该报错问题
 ```
-pyinstaller -F *.spec
+pyinstaller -F --onefile *.spec
 ```
