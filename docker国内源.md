@@ -1,4 +1,4 @@
-```
+``` bash
 vi /etc/docker/daemon.json
 
 # 内容如下：
