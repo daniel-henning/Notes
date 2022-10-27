@@ -1,15 +1,19 @@
-BUG ONE:
+### BUG ONE:
 
+bug信息
 ```
 [128115] WARNING: file already exists but should not: /tmp/_MEIBMiq3M/pyarrow/lib.cpython-36m-x86_64-linux-gnu.so
 ```
 
-上述bug在编译和运行过程中没有产生影响，但是自己在偶然的原因不知不觉的就解决了此bug，具体操作如下：
+此bug在编译和运行过程中没有产生影响，消除该警告信息的具体操作如下：
 首先找到.spec配置文件修改配置文件，在配置文件中加入以下代码：
 
 ```bash
 for d in a.datas:
-	if '_C.cp37-win_amd64.pyd' in d[0]:
+	if 'lib.cpython-36m-x86_64-linux-gnu.so' in d[0]:
 		a.datas.remove(d)
 		break
 ```
+
+修改完文件后使用.spec重新编译程序即可解决该报错问题
+
